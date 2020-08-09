@@ -1,0 +1,99 @@
+.row {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5em;
+}
+
+.row > .col-xs,
+.row > .col-s,
+.row > .col-m,
+.row > .col-l,
+.row > .col-xl {
+    box-sizing: border-box;
+    margin: 0;
+    flex-basis: calc(calc(8em - 100%) * 1024);
+    flex-shrink: 1;
+    max-width: 100%;
+}
+
+.row > .col-xs:not(.row),
+.row > .col-s:not(.row),
+.row > .col-m:not(.row),
+.row > .col-l:not(.row),
+.row > .col-xl:not(.row) {
+    padding: .5em;
+}
+
+.row > .col-xs {
+    flex-grow: 1;
+}
+
+.row > .col-s {
+    flex-grow: 2;
+}
+
+.row > .col-m {
+    flex-grow: 4;
+}
+
+.row > .col-l {
+    flex-grow: 6;
+}
+
+.row > .col-xl {
+    flex-grow: 8;
+}
+
+.row.size-xs {
+    max-width: 8em;
+}
+
+.row.size-s {
+    max-width: 16em;
+}
+
+.row.size-m {
+    max-width: 32em;
+}
+
+.row.size-l {
+    max-width: 48em;
+}
+
+.row.size-xl {
+    max-width: 64em;
+}
+
+.debug,
+.debug .row {
+    box-shadow: inset 0 0 3px grey;
+}
+
+.debug .col-xs,
+.debug .row.size-xs {
+    box-shadow: inset 0 0 4px red;
+}
+
+.debug .col-s,
+.debug .row.size-s {
+    box-shadow: inset 0 0 5px orange;
+}
+
+.debug .col-m,
+.debug .row.size-m {
+    box-shadow: inset 0 0 6px yellow;
+}
+
+.debug .col-l,
+.debug .row.size-l {
+    box-shadow: inset 0 0 7px limegreen;
+}
+
+.debug .col-xl,
+.debug .row.size-xl {
+    box-shadow: inset 0 0 8px green;
+}
